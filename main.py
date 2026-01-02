@@ -1,3 +1,4 @@
+from stats import get_word_count
 def get_book_text(file_path):
     contents = None
 
@@ -5,14 +6,6 @@ def get_book_text(file_path):
         contents = file.read()
 
     return contents
-
-def get_word_count(text):
-    count = 0
-    if len(text) == 0:
-        raise Exception("text is an empty string")
-    list = text.split()
-    count = len(list)
-    return count
 
 def main():
     file_path = "books/frankenstein.txt"
