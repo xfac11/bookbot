@@ -5,3 +5,13 @@ def get_word_count(text):
     list = text.split()
     count = len(list)
     return count
+
+def get_each_character_count(text):
+    lowered_string = text.lower()
+    character_count = {}
+    for character in lowered_string:
+        if character in character_count:
+            character_count[character] += 1
+        else:
+            character_count[character] = 1
+    return character_count
